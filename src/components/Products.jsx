@@ -1,5 +1,6 @@
 import data from '../data'
 import styled from 'styled-components'
+import Rating from './Rating'
 const Products = () => {
   console.log(data)
   return (
@@ -9,17 +10,7 @@ const Products = () => {
           <ProductWrapper key={item._id}>
             <Image src={item.image} alt={item.name} />
             <Link href={`/product/${item._id}`}>{item.name}</Link>
-            <div>
-              <Icon className='fa fa-star'></Icon>
-              <Icon className='fa fa-star'></Icon>
-              <Icon className='fa fa-star'></Icon>
-              <Icon className='fa fa-star'></Icon>
-              <Icon className='fa fa-star'></Icon>
-              &nbsp;
-              {item.numReviews <= 1
-                ? `${item.numReviews} review`
-                : `${item.numReviews} reviews`}
-            </div>
+            <Rating rate={item.numReviews} />
             <Tag>${item.price}</Tag>
           </ProductWrapper>
         )
@@ -61,9 +52,5 @@ const Image = styled.img`
   width: 100%;
 `
 const Tag = styled.p`
-  margin-left: 0.5rem;
-`
-const Icon = styled.i`
-  color: orange;
   margin-left: 0.5rem;
 `
