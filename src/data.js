@@ -58,7 +58,7 @@ const data = {
       countInStock: 100,
       brand: 'Pet Lover',
       rating: 4.5,
-      numReviews: 10,
+      numReviews: 0,
       description: 'high quality picture with a sleepy cat',
     },
     {

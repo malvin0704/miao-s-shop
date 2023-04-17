@@ -15,6 +15,10 @@ const Products = () => {
               <Icon className='fa fa-star'></Icon>
               <Icon className='fa fa-star'></Icon>
               <Icon className='fa fa-star'></Icon>
+              &nbsp;
+              {item.numReviews <= 1
+                ? `${item.numReviews} review`
+                : `${item.numReviews} reviews`}
             </div>
             <Tag>${item.price}</Tag>
           </ProductWrapper>
