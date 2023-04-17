@@ -10,7 +10,7 @@ const Products = () => {
           <ProductWrapper key={item._id}>
             <Image src={item.image} alt={item.name} />
             <Link href={`/product/${item._id}`}>{item.name}</Link>
-            <Rating rate={item.numReviews} />
+            <Rating numOfReviews={item.numReviews} rating={item.rating} />
             <Tag>${item.price}</Tag>
           </ProductWrapper>
         )

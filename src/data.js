@@ -45,7 +45,7 @@ const data = {
       price: 78,
       countInStock: 15,
       brand: 'Designer Su',
-      rating: 4.5,
+      rating: 4.3,
       numReviews: 14,
       description: 'high quality product',
     },
